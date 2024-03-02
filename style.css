@@ -9,6 +9,7 @@ header {
   background-color: #242424;
   position: sticky;
   top: 0;
+  z-index: 10000;
 }
 
 .header-content {
@@ -63,19 +64,58 @@ header {
 
 .beast-button {
   border-radius: 60px;
-  color: #000000;
+  color: #85eb00;
   font-family: "Rajdhani", sans-serif;
   font-size: 20px;
   width: 200px;
   height: 60px;
   font-weight: 500;
-  background: #85eb00;
+  background: none;
   padding: 10px 20px 10px 20px;
+  border-color: #85eb00;
   position: relative;
   bottom: 35px;
   text-decoration: none;
 }
 .beast-button:hover {
-  background: #ffffff;
+  background: black;
   text-decoration: none;
+}
+
+.products,
+.promotions {
+  background-color: #76d829;
+  text-align: center;
+  align-items: center;
+  color: #000;
+  white-space: nowrap;
+  padding: 30px 30px;
+  font-size: 40px;
+  max-height: 100px;
+}
+
+.product-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 100%;
+}
+
+.product-wrap img {
+  width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 1200px) and (min-width: 900px) {
+  .product-wrap img {
+    height: 500px;
+  }
+}
+@media screen and (max-width: 899px) and (min-width: 700px) {
+  .product-wrap img {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 699px) {
+  .product-wrap img {
+    height: 270px;
+  }
 }
