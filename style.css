@@ -108,24 +108,53 @@ header {
 #product-section {
   background-color: #000000;
 }
+
+.products {
+  color: white;
+}
+
 .product-wrap {
   display: flex;
-  flex-wrap: nowrap;
-  width: 100%;
   justify-content: center;
-  align-items: stretch;
+  align-items: center;
+  gap: 10px;
 }
 
-.product-wrap img {
-  flex: 1;
-  max-width: 20%;
+.image-container2 {
+  position: relative;
+  width: calc(20% - 10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container2 img {
+  width: 100%;
   height: auto;
-  padding: none;
+  display: block;
 }
 
-.product-wrap img:hover {
-  opacity: 0.5;
+.overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
 }
+
+.image-container2:hover .overlay {
+  display: flex;
+}
+
+.image-container2:hover .prd-img {
+  opacity: 0.4;
+}
+
+/* -------------------------------------- */
 
 .promo-wrap {
   display: flex;
