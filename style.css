@@ -37,6 +37,7 @@ header {
   text-decoration: none;
   padding-right: 2rem;
   padding-left: 1rem;
+  content-visibility: visible;
 }
 
 /* hero section */
@@ -94,8 +95,7 @@ header {
   color: #ffffff;
   white-space: nowrap;
   padding: 1%;
-  font-size: 40px;
-  max-height: 8%;
+  font-size: calc(32px + 16 * ((100vw - 568px) / (768 - 568)));
   /* Stole this code from a website that has css backgrounds */
   background-color: #000000;
   opacity: 0.8;
@@ -287,7 +287,42 @@ header {
   color: inherit;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
+  .hero-text-1 {
+    position: relative;
+    top: 50px;
+    width: 200px;
+  }
+  .hero-text-1 h1 {
+    font-size: 80px;
+  }
+  .nav-link {
+    font-size: small;
+    padding-right: 1rem;
+    padding-left: 0.5rem;
+  }
+  .promo-button,
+  .beast-button {
+    border-radius: 40px;
+    color: #85eb00;
+    font-family: "Rajdhani", sans-serif;
+    font-size: 15px;
+    width: 120px;
+    height: 50px;
+    font-weight: 500;
+    background: none;
+    padding: 10px 20px 10px 20px;
+    border-color: #85eb00;
+    bottom: 35px;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-link {
+    content-visibility: hidden;
+  }
+
   .footer-content {
     flex-direction: column;
     align-items: center;
@@ -297,5 +332,60 @@ header {
   .footer-links {
     flex-basis: 100%;
     text-align: center;
+  }
+}
+
+@media (max-height: 600px) {
+  .hero-text-1 {
+    position: relative;
+    top: 10px;
+    width: 200px;
+  }
+  .hero-text-1 h1 {
+    font-size: 50px;
+  }
+
+  .promo-button,
+  .beast-button {
+    border-radius: 40px;
+    color: #85eb00;
+    font-family: "Rajdhani", sans-serif;
+    font-size: 13px;
+    width: 100px;
+    height: 40px;
+    font-weight: 500;
+    background: none;
+    padding: 10px 20px 10px 20px;
+    border-color: #85eb00;
+    bottom: 35px;
+    text-decoration: none;
+  }
+}
+
+@media (max-height: 370px) {
+  .hero-text-1 {
+    position: relative;
+    width: 40px;
+  }
+  .hero-text-1 h1 {
+    font-size: 32px;
+  }
+  .promo-button,
+  .beast-button {
+    border-radius: 40px;
+    color: #85eb00;
+    font-family: "Rajdhani", sans-serif;
+    font-size: 13px;
+    width: 100px;
+    height: 40px;
+    font-weight: 500;
+    background: none;
+    padding: 10px 20px 10px 20px;
+    border-color: #85eb00;
+    text-decoration: none;
+  }
+
+  .beast-button {
+    top: -18px;
   }
 }
