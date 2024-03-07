@@ -1,5 +1,3 @@
-# Starter HTML and CSS
+# Monster Energy Rebrand
+06 - Brand Redesign - CSE204 - samudraam 
 
-This repository provides blank HTML and CSS files.
-
-Before submitting, replace the text in this README file with your name and a brief description of your work (just a sentence or two will do).
